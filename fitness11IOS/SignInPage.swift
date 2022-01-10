@@ -6,14 +6,23 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignInPage: View {
+    @State var isLoginMode = false
     @State private var email: String = ""
     @State private var password: String = ""
+    
+    @State var showhomepage: Bool = false
 
     
     var body: some View {
+        NavigationView{
         ZStack {
+            NavigationLink( destination:HomePage(),isActive: $showhomepage, label: {EmptyView() })
+            
+            
+            
             Color.white.edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
@@ -35,7 +44,7 @@ struct SignInPage: View {
                         .padding(.vertical)
                     
                     //Passwprd
-                    TextField("Enter Your Password", text: $password)
+                    SecureField("Enter Your Password", text: $password)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -43,6 +52,8 @@ struct SignInPage: View {
                         .cornerRadius(50.0)
                         .shadow(color: Color.black.opacity(0.08), radius: 60, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
                         .padding(.vertical)
+                    
+
                     
                     NavigationLink(
                         destination: ForgotPassword().navigationBarHidden(true),
@@ -55,23 +66,25 @@ struct SignInPage: View {
                                 .cornerRadius(200)
                                 .foregroundColor(Color.black)
 
-                            
+
                         })
                         .navigationBarHidden(true)
+
                     
-                    NavigationLink(
-                        destination: HomePage().navigationBarHidden(true),
-                        label: {
-                            Text("Login")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: 300)
-                                .padding()
-                                .background(Color.black)
-                                .cornerRadius(200)
-                        })
-                        .navigationBarHidden(true)
+                    
+                    Button {
+                       loginUser()
+                        //HomePage()
+                        } label: {
+                        Text("Login")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: 300)
+                            .padding()
+                            .background(Color.black)
+                            .cornerRadius(200)
+                    }
                     
                         Text("OR")
                             .fontWeight(.bold)
@@ -99,14 +112,31 @@ struct SignInPage: View {
             }
             .padding()
         }
+        }
+    }
+
+    @State var loginStatusMessage = ""
+private func loginUser(){
+    Auth.auth().signIn(withEmail: email, password: password){ result,err in
+        if let err = err{
+            print("Failed to login user:",err)
+            self.loginStatusMessage = "Failed to login user: \(err)"
+            return
+        }
+        self.showhomepage = true
+        print("Successfully logged in as a user: \(result?.user.uid ?? "")")
+        self.loginStatusMessage = "Successfully logged in as a user: \(result?.user.uid ?? "")"
+        
     }
 }
 
+}
 struct SignInPage_Previews: PreviewProvider {
     static var previews: some View {
         SignInPage()
     }
 }
+
 
 
 

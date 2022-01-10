@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+
 struct ForgotPassword: View {
     @State private var email: String = ""
     @State private var password: String = ""
     
     var body: some View {
+        NavigationView{
         ZStack {
             Color("BGColor").edgesIgnoringSafeArea(.all)
             VStack {
@@ -71,9 +73,9 @@ struct ForgotPassword: View {
             }
             .padding()
         }
+        }
     }
 }
-
 struct ForgotPassword_Previews: PreviewProvider {
     static var previews: some View {
         ForgotPassword()

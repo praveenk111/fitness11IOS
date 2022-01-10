@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignUpPage: View {
     @State private var firstname: String = ""
     @State private var Lastname: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
+    @State var showLoginpage: Bool = false
     
     var body: some View {
         ZStack {
+            NavigationLink( destination:HomePage(),isActive: $showLoginpage, label: {EmptyView() })
             Color("BGColor").edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
@@ -57,7 +60,7 @@ struct SignUpPage: View {
                         .padding(.vertical)
                     
                     //Passwprd
-                    TextField("Enter Your Password", text: $password)
+                    SecureField("Enter Your Password", text: $password)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -67,20 +70,20 @@ struct SignUpPage: View {
                         .padding(.vertical)
                     
                         .padding(.vertical)
-
-                    NavigationLink(
-                        destination: HomePage().navigationBarHidden(true),
-                        label: {
-                            Text("Register")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: 300)
-                                .padding()
-                                .background(Color.black)
-                                .cornerRadius(200)
-                        })
-                        .navigationBarHidden(true)
+                    
+                    
+                    Button {
+                       createNewAccount()
+                    } label: {
+                        Text("Register")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: 300)
+                            .padding()
+                            .background(Color.black)
+                            .cornerRadius(200)
+                    }
                     
                 }
                 
@@ -91,6 +94,20 @@ struct SignUpPage: View {
             .padding()
         }
     }
+    @State var loginStatusMessage = ""
+private func createNewAccount(){
+    Auth.auth().createUser(withEmail: email, password: password){ result,err in
+        if let err = err{
+            print("Failed to create user:",err)
+            self.loginStatusMessage = "Failed to craate user: \(err)"
+            return
+        }
+        self.showLoginpage = true;
+        print("Successfully created in as a user: \(result?.user.uid ?? "")")
+        self.loginStatusMessage = "Successfully created in as a user: \(result?.user.uid ?? "")"
+        
+    }
+}
 }
 
 
