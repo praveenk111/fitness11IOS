@@ -31,6 +31,7 @@
 /* Begin PBXFileReference section */
 		E555FCCE278B748D00E2AD0D /* Coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coach.swift; sourceTree = "<group>"; };
 		E555FCD0278B93D500E2AD0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E555FCE6278BDF0300E2AD0D /* fitness11IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitness11IOS.entitlements; sourceTree = "<group>"; };
 		E5D054E12774F81E00F403B5 /* fitness11IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitness11IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D054E42774F81E00F403B5 /* fitness11IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitness11IOSApp.swift; sourceTree = "<group>"; };
 		E5D054E62774F81E00F403B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		E5D054E32774F81E00F403B5 /* fitness11IOS */ = {
 			isa = PBXGroup;
 			children = (
+				E555FCE6278BDF0300E2AD0D /* fitness11IOS.entitlements */,
 				E5D054E42774F81E00F403B5 /* fitness11IOSApp.swift */,
 				E5D054E62774F81E00F403B5 /* ContentView.swift */,
 				E5D054E82774F81E00F403B5 /* Assets.xcassets */,
@@ -324,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fitness11IOS/fitness11IOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fitness11IOS/Preview Content\"";
@@ -353,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fitness11IOS/fitness11IOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fitness11IOS/Preview Content\"";

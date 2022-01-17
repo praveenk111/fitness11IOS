@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import SDWebImageSwiftUI
 
 struct Coach: View {
     
@@ -15,6 +16,9 @@ struct Coach: View {
     @State var age: [String] = []
     @State var imag: [String] = []
     @State var proficient1: [String] = []
+    @State private var imageURL = URL(string:"")
+
+    
 
     var body: some View {
         NavigationView{
@@ -22,17 +26,17 @@ struct Coach: View {
  
                 List(0..<name.count,id: \.self) { i in
                     ZStack{
-                    
-                Image(imag[i])
+                        //imageURL = imag[i]
+                        Text("\(imag[i])")
+                        WebImage(url: imag[i])
+                                         .resizable()
+                                         .aspectRatio(contentMode: .fit)
                     }
                     VStack{
                 Text("Name: " + name[i])
                     Text("Age: " + age[i])
                     Text("Email ID: " + EmailID[i])
                     Text("PROficient: " + proficient1[i])
-                    
-                    
-                    
                     
                 }
             }
@@ -47,6 +51,16 @@ struct Coach: View {
                 print("there is an Error")
                 return
             }
+            let storage = Storage.storage().reference()
+                  storage.downloadURL { (url, error) in
+                      if error != nil {
+                          print((error?.localizedDescription)!)
+                          print("error1")
+                          return
+                  }
+                  print("Download success")
+                  self.imageURL = url!
+              }
             for i in snap!.documentChanges{
                 let documentId = i.document.documentID
                 let username = i.document.get("name")
@@ -60,8 +74,6 @@ struct Coach: View {
                     age.append("\(Age!)")
                     imag.append("\(image!)")
                     proficient1.append("\(proficient!)")
-                    
-                    print(username)
                 }
             }
             
