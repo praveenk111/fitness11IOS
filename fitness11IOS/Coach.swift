@@ -26,9 +26,8 @@ struct Coach: View {
  
                 List(0..<name.count,id: \.self) { i in
                     ZStack{
-                        //imageURL = imag[i]
                         Text("\(imag[i])")
-                        WebImage(url: imag[i])
+                        WebImage(url: imageURL)
                                          .resizable()
                                          .aspectRatio(contentMode: .fit)
                     }
