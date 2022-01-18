@@ -7,14 +7,20 @@
 
 import SwiftUI
 import Firebase
+import AuthenticationServices
 
 struct SignInPage: View {
     @State var isLoginMode = false
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @State private var email1: String = ""
+    @State private var password1: String = ""
     
     @State var showhomepage: Bool = false
-
+    
+    @Environment(\.colorScheme) var colorSchema
+    @AppStorage("email") var   email: String = ""
+    @AppStorage("firstName") var  firstName : String = ""
+    @AppStorage("lastName") var   lastName: String = ""
+    @AppStorage("userId") var   userId : String = ""
     
     var body: some View {
         NavigationView{
@@ -34,7 +40,7 @@ struct SignInPage: View {
                         .fontWeight(.bold)
                         
                                         
-                    TextField("Enter Your Email", text: $email)
+                    TextField("Enter Your Email", text: $email1)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -44,7 +50,7 @@ struct SignInPage: View {
                         .padding(.vertical)
                     
                     //Passwprd
-                    SecureField("Enter Your Password", text: $password)
+                    SecureField("Enter Your Password", text: $password1)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -106,18 +112,53 @@ struct SignInPage: View {
                         })
                         .navigationBarHidden(true)
                     
-                }
+                    VStack{
+                        if userId.isEmpty{
+                            SignInWithAppleButton(.continue) { request  in
+                                
+                                request.requestedScopes = [.email, .fullName]
+                            } onCompletion: { result in
+                                
+                                switch result{
+                                case .success(let auth):
+                                    switch auth.credential {
+                                    case let credential as ASAuthorizationAppleIDCredential:
+                                        let userid = credential.user
+                                        let email = credential.email
+                                        let firstName = credential.fullName?.givenName
+                                        let lastName = credential.fullName?.familyName
+                                        
+                                        self.email = email ?? ""
+                                        self.userId = userid
+                                        self.firstName = firstName ?? ""
+                                        self.lastName = lastName ?? ""
+                                    default:
+                                        break
+                                    }
+                                case .failure(let error):
+                                    print(error)
+                                }
+                                
+                            }
+                            .frame(height:50)
+                                .padding()
+                                .cornerRadius(8)                }else{
+                            //signed in
+                                    NavigationLink(destination: HomePage(), label: {EmptyView() })
+                        }
+                    }                }
                 
                 Spacer()
             }
             .padding()
         }
+           
         }
     }
 
     @State var loginStatusMessage = ""
 private func loginUser(){
-    Auth.auth().signIn(withEmail: email, password: password){ result,err in
+    Auth.auth().signIn(withEmail: email1, password: password1){ result,err in
         if let err = err{
             print("Failed to login user:",err)
             self.loginStatusMessage = "Failed to login user: \(err)"
@@ -136,7 +177,4 @@ struct SignInPage_Previews: PreviewProvider {
         SignInPage()
     }
 }
-
-
-
 
