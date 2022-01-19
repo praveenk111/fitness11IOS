@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ListofExercise: View {
+   
     private let imagList: [ExerciseItems] = [
         ExerciseItems(imag: "L0", name: "Front Planks", description: "Planks are a great core stabilizing exercise.  Your entire core is stabilized through constant tension, so nothing is neglected and they are completely safe.  Get in pushup position on your forearms with your elbows bent.  Hold yourself up in a straight line and pull your belly button in to create tension.  Hold for as long as you can before your back sags to the floor.  For a more difficult variation, raise your opposite leg and arm off the ground."),
      ExerciseItems(imag: "L1", name: "Side Planks", description: "The side plank is the same concept as the front plank except this time you’ll be extended on your side with only one elbow and forearm on the ground.    Your other hand can point straight up in the air or rest of your hips.  Raise your hips off the ground and keep tension in the core to form a straight line with your body.  Hold until failure.  A variation of the side plank can be moving your hips in a side to side motion (up and down off the ground) for repetitions instead of holding still.  Side planks are great for targeting the obliques."),

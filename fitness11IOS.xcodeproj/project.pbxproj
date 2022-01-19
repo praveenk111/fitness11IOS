@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9700019C2798AC7100910AE4 /* bmi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9700019B2798AC7100910AE4 /* bmi.swift */; };
 		E555FCCF278B748D00E2AD0D /* Coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E555FCCE278B748D00E2AD0D /* Coach.swift */; };
 		E555FCD1278B93D500E2AD0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E555FCD0278B93D500E2AD0D /* GoogleService-Info.plist */; };
 		E555FCD4278B958E00E2AD0D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E555FCD3278B958E00E2AD0D /* FirebaseAuth */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9700019B2798AC7100910AE4 /* bmi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmi.swift; sourceTree = "<group>"; };
 		E555FCCE278B748D00E2AD0D /* Coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coach.swift; sourceTree = "<group>"; };
 		E555FCD0278B93D500E2AD0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E555FCE6278BDF0300E2AD0D /* fitness11IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitness11IOS.entitlements; sourceTree = "<group>"; };
@@ -91,8 +93,8 @@
 				E5D054F62774FE5A00F403B5 /* ForgotPassword.swift */,
 				E5D054F82774FE8C00F403B5 /* SignUpPage.swift */,
 				E5D054FA2774FEB900F403B5 /* ListofExercise.swift */,
-				E555FCCE278B748D00E2AD0D /* Coach.swift */,
 				E5D054FC2774FEDE00F403B5 /* HomePage.swift */,
+				E555FCCE278B748D00E2AD0D /* Coach.swift */,
 				E555FCD0278B93D500E2AD0D /* GoogleService-Info.plist */,
 			);
 			path = fitness11IOS;
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				E5D054EB2774F81E00F403B5 /* Preview Assets.xcassets */,
+				9700019B2798AC7100910AE4 /* bmi.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			files = (
 				E5D054FB2774FEB900F403B5 /* ListofExercise.swift in Sources */,
 				E5D054E72774F81E00F403B5 /* ContentView.swift in Sources */,
+				9700019C2798AC7100910AE4 /* bmi.swift in Sources */,
 				E5D054F92774FE8C00F403B5 /* SignUpPage.swift in Sources */,
 				E5D054E52774F81E00F403B5 /* fitness11IOSApp.swift in Sources */,
 				E555FCCF278B748D00E2AD0D /* Coach.swift in Sources */,
