@@ -51,7 +51,7 @@ struct HomePage: View {
                         .background(Color.white)
             
                         VStack{
-                            NavigationLink( destination:bmi_UI(),isActive: $showbmipage ,label: {
+                            NavigationLink( destination:bmi(),isActive: $showbmipage ,label: {
                                 VStack{
                                     Image("calculator (1)").resizable().aspectRatio(contentMode:.fit)
                                     Text(" BMI ")
