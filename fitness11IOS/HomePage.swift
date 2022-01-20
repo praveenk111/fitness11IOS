@@ -12,6 +12,7 @@ struct HomePage: View {
     @State var showbmipage: Bool = false
     @State var showexercisepage: Bool = false
     @State var showecoachpage: Bool = false
+    @State var showaboutuspage: Bool = false
     
     var body: some View {
         NavigationView{
@@ -51,7 +52,7 @@ struct HomePage: View {
                         .background(Color.white)
             
                         VStack{
-                            NavigationLink( destination:bmi(),isActive: $showbmipage ,label: {
+                            NavigationLink( destination:bmi_UI(),isActive: $showbmipage ,label: {
                                 VStack{
                                     Image("calculator (1)").resizable().aspectRatio(contentMode:.fit)
                                     Text(" BMI ")
@@ -110,7 +111,7 @@ struct HomePage: View {
                     HStack{
                         
                         VStack{
-                            NavigationLink( destination:Coach(),isActive: $showecoachpage ,label: {
+                            NavigationLink( destination:about_us(),isActive: $showaboutuspage ,label: {
                         
                         
                         VStack{
