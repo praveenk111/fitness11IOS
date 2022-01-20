@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9700019C2798AC7100910AE4 /* bmi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9700019B2798AC7100910AE4 /* bmi.swift */; };
+		CC68B3582799ADFF00D39B70 /* bmi_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68B3572799ADFE00D39B70 /* bmi_UI.swift */; };
 		E555FCCF278B748D00E2AD0D /* Coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E555FCCE278B748D00E2AD0D /* Coach.swift */; };
 		E555FCD1278B93D500E2AD0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E555FCD0278B93D500E2AD0D /* GoogleService-Info.plist */; };
 		E555FCD4278B958E00E2AD0D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E555FCD3278B958E00E2AD0D /* FirebaseAuth */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		9700019B2798AC7100910AE4 /* bmi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmi.swift; sourceTree = "<group>"; };
+		CC68B3572799ADFE00D39B70 /* bmi_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmi_UI.swift; sourceTree = "<group>"; };
 		E555FCCE278B748D00E2AD0D /* Coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coach.swift; sourceTree = "<group>"; };
 		E555FCD0278B93D500E2AD0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E555FCE6278BDF0300E2AD0D /* fitness11IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitness11IOS.entitlements; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				E5D054FC2774FEDE00F403B5 /* HomePage.swift */,
 				E555FCCE278B748D00E2AD0D /* Coach.swift */,
 				E555FCD0278B93D500E2AD0D /* GoogleService-Info.plist */,
+				CC68B3572799ADFE00D39B70 /* bmi_UI.swift */,
 			);
 			path = fitness11IOS;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				E5D054E72774F81E00F403B5 /* ContentView.swift in Sources */,
 				9700019C2798AC7100910AE4 /* bmi.swift in Sources */,
 				E5D054F92774FE8C00F403B5 /* SignUpPage.swift in Sources */,
+				CC68B3582799ADFF00D39B70 /* bmi_UI.swift in Sources */,
 				E5D054E52774F81E00F403B5 /* fitness11IOSApp.swift in Sources */,
 				E555FCCF278B748D00E2AD0D /* Coach.swift in Sources */,
 				E5D054F52774FE3500F403B5 /* SignInPage.swift in Sources */,
