@@ -97,7 +97,7 @@ struct About_us: View {
 
 struct About_us_Previews: PreviewProvider {
     static var previews: some View {
-        About_us().previewDevice("iPhone 13 Pro")
+        About_us()
     }
 }
     
