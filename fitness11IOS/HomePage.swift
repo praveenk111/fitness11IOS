@@ -110,7 +110,7 @@ struct HomePage: View {
                     HStack{
                         
                         VStack{
-                            NavigationLink( destination:About_us(),isActive: $showecoachpage ,label: {
+                            NavigationLink( destination:about_us(),isActive: $showecoachpage ,label: {
                         
                         
                         VStack{
