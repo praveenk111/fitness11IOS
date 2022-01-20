@@ -227,7 +227,7 @@ struct bmi_UI: View {
 
 struct bmi_UI_Previews: PreviewProvider {
     static var previews: some View {
-        bmi_UI()
+        ContentView()
     }
 }
 
