@@ -16,99 +16,116 @@ struct HomePage: View {
     
     var body: some View {
         NavigationView{
+            
             VStack{
                 //title//
                 VStack{
-                    Spacer()
-                    HStack{
-                        Text("HOMEPAGE")
+                    
+                HStack{
+                         Text("HOMEPAGE")
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(Color.black)
-                            .multilineTextAlignment(.leading)
-                            .padding()
-                        Spacer()
+                            .foregroundColor(Color.black).padding()
+                           
+                          
+                         Spacer()
+                    Spacer()
+                    Spacer()
                         
                             Image("home")
-                            .resizable()
-                            .frame(width:60,height: 60.0)
+                             .resizable()
+                            .frame(width:40,height: 40.0)
+                    Spacer()
+                    
+                    
                     }
-                    .background(Color.white)
+                    Spacer()
+                    
+                        //.background(Color.white)
                     HStack{
+                        
                                         
                         VStack{
                             NavigationLink( destination:ListofExercise(),isActive: $showexercisepage ,label: {
                                 VStack{
-                            Image("workout-machine (1)")
-                           .resizable().aspectRatio(contentMode:.fit)
+                            Image("barbell")
+                                        //.resizable().frame(width:120, height:120)
+                                        .resizable().aspectRatio(contentMode:.fit).padding()
                             
                             Text("EXERCISES")
-                                .font(.title)
-                                .fontWeight(.bold)}
+                                        .font(.callout)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.black)
+                                }
                             }
                             
                    ) }
                     
-                        .background(Color.white)
+                       // .background(Color.white)
             
                         VStack{
                             NavigationLink( destination:bmi_UI(),isActive: $showbmipage ,label: {
                                 VStack{
-                                    Image("calculator (1)").resizable().aspectRatio(contentMode:.fit)
+                                    Image("bmi (1)").resizable().aspectRatio(contentMode:.fit).padding()
                                     Text(" BMI ")
-                                        .font(.title)
+                                        .font(.callout)
+                                        .foregroundColor(Color.black)
                                         .fontWeight(.bold)}
                             
                             }
-                                        
-                                            )}
-
+                               
+                        )}
                         
-                    
-                    .background(Color.white)
+                        
+
+                        //.background(Color.white)
                 }
+                    Spacer()
+                    
                     HStack{
+                        
                         VStack{
                             NavigationLink( destination:ListofExercise(),isActive: $showexercisepage ,label: {
                         
                         VStack{
                             
-                            Image("coach")
-                                .resizable().aspectRatio(contentMode:.fit)
+                            Image("coach (1)")
+                                .resizable().aspectRatio(contentMode:.fit).padding()
                             
                             Text("TRAINER")
-                                .font(.title)
+                                .font(.callout)
+                                .foregroundColor(Color.black)
                                 .fontWeight(.bold)}
                                             }
                                             
-                                   ) }
-                        .background(Color.white)
+                                   )}
+                    
+                       // .background(Color.white)
                         
-                        VStack{
+                        HStack{
+                    
                             NavigationLink( destination:Coach(),isActive: $showecoachpage ,label: {
                         
                         VStack{
-                           
-                            
-                                Image("review")
 
-                                    .resizable().aspectRatio(contentMode:.fit)
+                                Image("send")
+
+                                .resizable().aspectRatio(contentMode:.fit).padding()
                             
                             
                             Text("SEND EMAIL")
-                                .font(.title)
-                                .fontWeight(.bold)}
+                                .font(.callout)
+                                .foregroundColor(Color.black)
+                                .fontWeight(.bold)
+                            
+                        }
                                 
                             }
-                                        
-                                            )
+                            )
                     }
-                        .background(Color.white)
-                        
-
-                        
+                        //.background(Color.white)
                 }
-                    HStack{
+                    //HStack{
                         
                         VStack{
                             NavigationLink( destination:about_us(),isActive: $showaboutuspage ,label: {
@@ -116,35 +133,45 @@ struct HomePage: View {
                         
                         VStack{
                             
-                            Image("man")
-                                .resizable().frame(width:200, height:200)
+                            Image("teamwork")
+                              // .resizable().frame(width:120, height:120)
+                                .resizable().aspectRatio(contentMode:.fit).padding()
                                 
                             Text("ABOUT US")
-                                .font(.title)
+                                .font(.callout)
+                                .foregroundColor(Color.black)
                                 .fontWeight(.bold)}
                                             
-                                            }
-                                                        
-                                                            )
+                                            })
+                            
+                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                            }
+                            Spacer()
                                     }
-                        .background(Color.white)
+                        //.background(Color.white)
                         
-                        
-                }
+               // }
+                    //
+                
+                    
+                    Spacer()
                     Spacer()
                     
             }
+        
                 
-                .background(Color.white)
-                .padding()
+                .background(Color.gray)
+            //.padding()
                
         }
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.bottom)
         
             
         
         }
 }
+
 
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
