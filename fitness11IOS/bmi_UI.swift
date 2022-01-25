@@ -58,7 +58,7 @@ struct RadioButtonField: View {
                     Text(label)
                         .font(Font.system(size: textSize))
                     Spacer()
-                }.foregroundColor(self.color)
+                }.foregroundColor((Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255)))
             }
             .foregroundColor(Color.white)
         }
@@ -127,18 +127,20 @@ struct bmi_UI: View {
 
     var body: some View {
         VStack{
-            Text("Calculate your BMI")
+            Text("Calculate your BMI").foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
                 .bold()
                 .font(.largeTitle)
                 .multilineTextAlignment(.leading)
+                
             VStack{
                 Text("Result: \(result, specifier: "%.2f")")
+                    .foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
                     .bold()
                     .font(.largeTitle)
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.center)
                     .padding()
-                    Text("\(comment)")
+                    Text("\(comment)").foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
                     .font(.headline)
                 
             }
@@ -148,6 +150,7 @@ struct bmi_UI: View {
             //.padding()
             
                 TextField("Height in feet", text: $feet)
+            
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding()
             TextField("Height in inches", text: $inches)
@@ -160,6 +163,7 @@ struct bmi_UI: View {
             //..................
             HStack{
                 Text("Gender")
+                    .foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
                     .font(.headline)
                     .bold()
                     .padding(15)
@@ -175,11 +179,17 @@ struct bmi_UI: View {
                 }
         label: {
                 Text("CALCULATE")
-                    .padding(20)
-                    .foregroundColor(Color.white)
+              // .padding(20)
+                .font(.title2).bold()
+               .foregroundColor(Color.white)
+                   .frame(width: 200, height: 60)
+                   .cornerRadius(300)
+            
+//                    .foregroundColor(Color.white).cornerRadius(300)
+            
             }
-            .contentShape(Rectangle())
-            .background(Color.black)
+           // .contentShape(Circle())
+            .background(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
             .padding(30)
             
             HStack{
@@ -190,7 +200,7 @@ struct bmi_UI: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 60)
-                        .background(Rectangle().fill(Color.black))
+                        .background(Rectangle().fill(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255)).cornerRadius(300))
                 }
 
                 
@@ -203,7 +213,7 @@ struct bmi_UI: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 60)
-                        .background(Rectangle().fill(Color.black))
+                        .background(Rectangle().fill(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255)).cornerRadius(300))
                 }
 
                 

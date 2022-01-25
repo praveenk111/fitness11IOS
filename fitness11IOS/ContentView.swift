@@ -1,21 +1,32 @@
-//
-//  ContentView.swift
-//  fitness11IOS
-//
-//  Created by Vinith kumar Tatipally on 2021-12-23.
-//
+
 
 import SwiftUI
-
+import UIKit
+import MessageUI
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var isShowingMailView = false
+
+    var body: some View {
+
+        VStack {
+            if MFMailComposeViewController.canSendMail() {
+                Button("Show mail view") {
+                    self.isShowingMailView.toggle()
+                }
+            } else {
+                Text("Can't send emails from this device")
+            }
+            if result != nil {
+                Text("Result: \(String(describing: result))")
+                    .lineLimit(nil)
+            }
+        }
+        .sheet(isPresented: $isShowingMailView) {
+            MailView(isShowing: self.$isShowingMailView, result: self.$result)
+        }
+
     }
+
 }

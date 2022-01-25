@@ -24,12 +24,14 @@ struct ListofExercise: View {
     
     
     var body: some View {
+        
+        //Color.gray.edgesIgnoringSafeArea(.all)
         //NavigationView{
             List(imagList) { imagItem in
                 NavigationLink(destination: DetailsView(ExItem:imagItem)){
                     HStack {
                         ImageCircleView(imagItem:imagItem)
-                        Text(imagItem.name).font(.headline)
+                        Text(imagItem.name).font(.headline).foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
                     }.padding(7)
                 }
             }.navigationBarTitle("Exercise List")
@@ -55,12 +57,13 @@ struct DetailsView: View {
                 .frame(width: 400, height: 300)
             
             
-                Text(ExItem.description).frame(width: 350, height: 400, alignment: Alignment.center).font(.title3).foregroundColor(.brown)
+                Text(ExItem.description).frame(width: 350, height: 400, alignment: Alignment.center).font(.title3).foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
         Spacer()
             }.padding(.top)
         }
         .padding()
         .navigationBarTitle(Text(ExItem.name), displayMode: .inline)
+       // .background(Color.gray).edgesIgnoringSafeArea(.all)
     }
 }
 struct ImageCircleView: View{

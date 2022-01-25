@@ -17,6 +17,7 @@ struct HomePage: View {
     @State var showecoachpage: Bool = false
     @State var showaboutuspage: Bool = false
     @State var showsigninpage: Bool = false
+    @State var showsmailpage: Bool = false
    
     
     
@@ -124,7 +125,7 @@ struct HomePage: View {
                         
                         HStack{
                             
-                            NavigationLink( destination:Coach(),isActive: $showecoachpage ,label: {
+                            NavigationLink( destination:sendmail(),isActive: $showsmailpage ,label: {
                                 
                                 VStack{
                                     
@@ -167,19 +168,21 @@ struct HomePage: View {
                         
                         
                         Spacer()
+                        Spacer()
                     }
+                    Spacer()
                     Button {
                        Signout()
                         //HomePage()
                         } label: {
-                        Text("LOgout")
+                        Text("Logout")
                             .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-                            .frame(maxWidth: 300)
+                            .frame(maxWidth: 150)
                             .padding()
                             .background(Color.black)
-                            .cornerRadius(200)
+                            .cornerRadius(100)
                     }
                         
                     }
