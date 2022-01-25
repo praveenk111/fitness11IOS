@@ -196,7 +196,7 @@ struct HomePage: View {
                 
                 
                 
-                .background(Color.gray)
+                .background(Color.white)
                 //.padding()
                 .navigationTitle(Text("HOMEPAGE"))
                 
