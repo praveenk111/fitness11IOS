@@ -11,6 +11,7 @@ import FirebaseAuth
 
 struct HomePage: View {
     
+    
     @State var showbmipage: Bool = false
     @State var showexercisepage: Bool = false
     @State var showecoachpage: Bool = false
@@ -198,6 +199,7 @@ struct HomePage: View {
                 .background(Color.gray)
                 //.padding()
                 .navigationTitle(Text("HOMEPAGE"))
+                
             //}
             //.edgesIgnoringSafeArea(.bottom)
             .background(Color.gray)

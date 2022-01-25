@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97457801279F73BE0071F8FB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97457800279F73BE0071F8FB /* LoginViewModel.swift */; };
 		CC68B3582799ADFF00D39B70 /* bmi_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68B3572799ADFE00D39B70 /* bmi_UI.swift */; };
 		CC68B35A2799AFD400D39B70 /* diet_plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68B3592799AFD400D39B70 /* diet_plan.swift */; };
 		CC68B35C2799B02000D39B70 /* about_us.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68B35B2799B02000D39B70 /* about_us.swift */; };
@@ -34,7 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		97457800279F73BE0071F8FB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CC68B3572799ADFE00D39B70 /* bmi_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmi_UI.swift; sourceTree = "<group>"; };
 		CC68B3592799AFD400D39B70 /* diet_plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diet_plan.swift; sourceTree = "<group>"; };
 		CC68B35B2799B02000D39B70 /* about_us.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = about_us.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				E5D054E82774F81E00F403B5 /* Assets.xcassets */,
 				E5D054EA2774F81E00F403B5 /* Preview Content */,
 				E5D054F42774FE3500F403B5 /* SignInPage.swift */,
-				97457800279F73BE0071F8FB /* LoginViewModel.swift */,
 				E5D054F62774FE5A00F403B5 /* ForgotPassword.swift */,
 				E5D054F82774FE8C00F403B5 /* SignUpPage.swift */,
 				E5D054FA2774FEB900F403B5 /* ListofExercise.swift */,
@@ -214,7 +211,6 @@
 				E5D054E52774F81E00F403B5 /* fitness11IOSApp.swift in Sources */,
 				CC68B35C2799B02000D39B70 /* about_us.swift in Sources */,
 				E555FCCF278B748D00E2AD0D /* Coach.swift in Sources */,
-				97457801279F73BE0071F8FB /* LoginViewModel.swift in Sources */,
 				E5D054F52774FE3500F403B5 /* SignInPage.swift in Sources */,
 				E5D054FD2774FEDE00F403B5 /* HomePage.swift in Sources */,
 				CC68B35E2799B03B00D39B70 /* under_weight.swift in Sources */,
