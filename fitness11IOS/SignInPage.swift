@@ -18,6 +18,11 @@ struct SignInPage: View {
     @AppStorage("userId") var   userId : String = ""
     
     var body: some View {
+        Spacer()
+       // VStack{Image("barbell").resizable().frame(width:100, height: 100,alignment: .bottom)
+//                .resizable().aspectRatio(contentMode:.fit).padding().padding()
+       // }
+        
         NavigationView{
         ZStack {
             NavigationLink( destination:HomePage(),isActive: $showhomepage, label: {EmptyView() })
@@ -29,19 +34,19 @@ struct SignInPage: View {
                 Spacer()
                 
                 VStack {
-                    Text("Login")
+                    Image("barbell (1)").resizable().frame(width:100, height: 100,alignment:.topLeading)
+                    Text("GET SET GO")
                         .font(.largeTitle)
                         .foregroundColor(Color.black)
                         .fontWeight(.bold)
-                        
-                                        
+
                     TextField("Enter Your Email", text: $email1)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
                         .cornerRadius(50.0)
-                        .shadow(color: Color.black.opacity(0.08), radius: 60, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
+                        .shadow(color: Color.black.opacity(0.10), radius: 60, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
                         .padding(.vertical)
                     
                     //Passwprd
@@ -147,8 +152,10 @@ struct SignInPage: View {
             }
             .padding()
         }
-           
+        .navigationBarBackButtonHidden(true)
+        
         }
+        .navigationBarBackButtonHidden(true)
     }
 
     @State var loginStatusMessage = ""

@@ -199,7 +199,7 @@ struct HomePage: View {
                 .background(Color.white)
                 //.padding()
                 .navigationTitle(Text("HOMEPAGE"))
-                
+                .navigationBarBackButtonHidden(true)
             //}
             //.edgesIgnoringSafeArea(.bottom)
             .background(Color.gray)

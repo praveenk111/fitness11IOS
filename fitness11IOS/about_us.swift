@@ -17,7 +17,7 @@ struct about_us: View {
                    
                Text("'We are continously trying to improve our work to provide the user an awesome experience. Our goal is to give better and relevant result to our customers.'")
                    .padding(8)
-                   .font(.subheadline)
+                   .font(.callout)
                    .multilineTextAlignment(.leading)
                ScrollView(.horizontal, showsIndicators: false, content:{
                    HStack{
@@ -27,8 +27,8 @@ struct about_us: View {
                                .clipShape(Circle())
                                .frame(width:120, height: 120)
                                .padding(10)
-                           Text("2092193")
-                           Text("Jatinder")
+                           Text("2092193").fontWeight(.bold)
+                           Text("Jatinder").fontWeight(.bold)
                            Text("I value a team environment because talking things out, leaning on each other, and working collaborately are so crucial to anyone's success.")
                                .fixedSize(horizontal: false, vertical: true)
                                .multilineTextAlignment(.center)
