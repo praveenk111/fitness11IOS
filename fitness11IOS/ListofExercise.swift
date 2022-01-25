@@ -24,7 +24,7 @@ struct ListofExercise: View {
     
     
     var body: some View {
-        NavigationView{
+        //NavigationView{
             List(imagList) { imagItem in
                 NavigationLink(destination: DetailsView(ExItem:imagItem)){
                     HStack {
@@ -33,7 +33,7 @@ struct ListofExercise: View {
                     }.padding(7)
                 }
             }.navigationBarTitle("Exercise List")
-            }
+           // }
     }
 }
 
@@ -44,18 +44,18 @@ struct DetailsView: View {
         VStack(alignment: .leading){
             HStack {
 
-                
+                Spacer()
                 Text(ExItem.name).font(.largeTitle).bold()
                 
                 Spacer()
             }
             VStack{
-            Image(ExItem.imag)
+            Image(ExItem.imag).resizable()
                 .shadow(radius: 3)
-                .frame(width: 20, height: 45)
+                .frame(width: 350, height: 200)
             
             
-            Text(ExItem.description).frame(width: 500, height: 500, alignment: Alignment.center)
+                Text(ExItem.description).frame(width: 350, height: 400, alignment: Alignment.center)
         Spacer()
             }.padding(.top)
         }

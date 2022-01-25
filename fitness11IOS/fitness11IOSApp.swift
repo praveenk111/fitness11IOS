@@ -15,8 +15,8 @@ struct fitness11IOSApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomePage()
-            //SignInPage()
+            //HomePage()
+            SignInPage()
             //ListofExercise()
         }
     }

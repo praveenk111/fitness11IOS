@@ -21,7 +21,7 @@ struct Coach: View {
     
 
     var body: some View {
-        NavigationView{
+       // NavigationView{
             VStack{
  
                 List(0..<name.count,id: \.self) { i in
@@ -41,7 +41,7 @@ struct Coach: View {
             }
 
         }.onAppear(perform: dataretrive)
-    }
+    //}
     }
     func dataretrive(){
         let db = Firestore.firestore()
@@ -74,8 +74,9 @@ struct Coach: View {
                     imag.append("\(image!)")
                     proficient1.append("\(proficient!)")
                 }
-            }
             
+            }
+                
         }
     }
 }

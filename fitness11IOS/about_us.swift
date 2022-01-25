@@ -75,7 +75,7 @@ struct about_us: View {
                                .clipShape(Circle())
                                .frame(width:120, height: 120)
                                .padding(10)
-                           Text("123456")
+                           Text("2092164")
                            Text("Praveen")
                            Text("I value a team environment because talking things out, leaning on each other, and working collaborately are so crucial to anyone's success.")
                                .fixedSize(horizontal: false, vertical: true)

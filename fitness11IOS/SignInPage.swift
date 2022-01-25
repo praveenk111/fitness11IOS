@@ -1,9 +1,4 @@
-//
-//  SignInPage.swift
-//  fitness11IOS
-//
-//  Created by Vinith kumar Tatipally on 2021-12-23.
-//
+
 
 import SwiftUI
 import Firebase
