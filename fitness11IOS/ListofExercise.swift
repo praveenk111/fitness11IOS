@@ -31,7 +31,7 @@ struct ListofExercise: View {
                 NavigationLink(destination: DetailsView(ExItem:imagItem)){
                     HStack {
                         ImageCircleView(imagItem:imagItem)
-                        Text(imagItem.name).font(.headline).foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
+                        Text(imagItem.name).font(.headline).foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                     }.padding(7)
                 }
             }.navigationBarTitle("Exercise List")
@@ -54,10 +54,11 @@ struct DetailsView: View {
             VStack{
             Image(ExItem.imag).resizable()
                 .shadow(radius: 2)
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                 .frame(width: 400, height: 300)
             
             
-                Text(ExItem.description).frame(width: 350, height: 400, alignment: Alignment.center).font(.title3).foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
+                Text(ExItem.description).bold().frame(width: 350, height: 400, alignment: Alignment.center).foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
         Spacer()
             }.padding(.top)
         }

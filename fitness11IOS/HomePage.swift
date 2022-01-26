@@ -74,9 +74,10 @@ struct HomePage: View {
                                         .resizable().aspectRatio(contentMode:.fit).padding().padding()
                                     
                                     Text("EXERCISES")
-                                        .font(.callout)
+                                        .font(.title3)
+                                    
                                         .fontWeight(.bold)
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor((Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)))
                                 }
                             }
                                             
@@ -89,8 +90,8 @@ struct HomePage: View {
                                 VStack{
                                     Image("bmi (1)").resizable().aspectRatio(contentMode:.fit).padding().padding()
                                     Text(" BMI ")
-                                        .font(.callout)
-                                        .foregroundColor(Color.black)
+                                        .font(.title3)
+                                        .foregroundColor((Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)))
                                     .fontWeight(.bold)}
                                 
                             }
@@ -114,8 +115,8 @@ struct HomePage: View {
                                         .resizable().aspectRatio(contentMode:.fit).padding().padding()
                                     
                                     Text("TRAINER")
-                                        .font(.callout)
-                                        .foregroundColor(Color.black)
+                                        .font(.title3)
+                                        .foregroundColor((Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)))
                                     .fontWeight(.bold)}
                             }
                                             
@@ -135,8 +136,8 @@ struct HomePage: View {
                                     
                                     
                                     Text("SEND EMAIL")
-                                        .font(.callout)
-                                        .foregroundColor(Color.black)
+                                        .font(.title3)
+                                        .foregroundColor((Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)))
                                         .fontWeight(.bold)
                                     
                                 }
@@ -160,8 +161,8 @@ struct HomePage: View {
                                     .resizable().aspectRatio(contentMode:.fit).padding().padding()
                                 
                                 Text("ABOUT US")
-                                    .font(.callout)
-                                    .foregroundColor(Color.black)
+                                    .font(.title3)
+                                    .foregroundColor((Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)))
                                 .fontWeight(.bold)}
                             
                         })
@@ -181,7 +182,7 @@ struct HomePage: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: 150)
                             .padding()
-                            .background(Color.black)
+                            .background(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                             .cornerRadius(100)
                     }
                         
@@ -205,7 +206,7 @@ struct HomePage: View {
                 .navigationBarBackButtonHidden(true)
             //}
             //.edgesIgnoringSafeArea(.bottom)
-            .background(Color.gray)
+            
             
             
         }

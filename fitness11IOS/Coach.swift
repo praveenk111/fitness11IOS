@@ -8,6 +8,10 @@
 import SwiftUI
 import Firebase
 import SDWebImageSwiftUI
+import UIKit
+import Firebase
+import FirebaseStorage
+import FirebaseFirestore
 
 struct Coach: View {
     
@@ -15,6 +19,7 @@ struct Coach: View {
     @State var EmailID: [String] = []
     @State var age: [String] = []
     @State var imag: [String] = []
+    @State var image: [String] = []
     @State var proficient1: [String] = []
     @State private var imageURL = URL(string:"")
 
@@ -22,6 +27,12 @@ struct Coach: View {
 
     var body: some View {
        // NavigationView{
+        VStack{
+        Text("Find Coach").foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
+            .bold()
+            .font(.largeTitle)
+            .multilineTextAlignment(.leading)
+        }
             VStack{
  
                 List(0..<name.count,id: \.self) { i in
@@ -32,10 +43,10 @@ struct Coach: View {
                                          .aspectRatio(contentMode: .fit)
                     }
                     VStack{
-                Text("Name: " + name[i])
-                    Text("Age: " + age[i])
-                    Text("Email ID: " + EmailID[i])
-                    Text("PROficient: " + proficient1[i])
+                        Text("Name: " + name[i]).foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
+                    Text("Age: " + age[i]).foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
+                    Text("Email ID: " + EmailID[i]).foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
+                    Text("PROficient: " + proficient1[i]).foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                     
                 }
             }

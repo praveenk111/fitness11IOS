@@ -58,7 +58,7 @@ struct RadioButtonField: View {
                     Text(label)
                         .font(Font.system(size: textSize))
                     Spacer()
-                }.foregroundColor((Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255)))
+                }.foregroundColor((Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)))
             }
             .foregroundColor(Color.white)
         }
@@ -127,43 +127,48 @@ struct bmi_UI: View {
 
     var body: some View {
         VStack{
-            Text("Calculate your BMI").foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
+            Text("Calculate your BMI").foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                 .bold()
                 .font(.largeTitle)
                 .multilineTextAlignment(.leading)
-                
+                Spacer()
             VStack{
-                Text("Result: \(result, specifier: "%.2f")")
-                    .foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
+                Text("Result : \(result, specifier: "%.2f")")
+                .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                     .bold()
                     .font(.largeTitle)
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.center)
                     .padding()
-                    Text("\(comment)").foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
+                Text("\(comment)").foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                     .font(.headline)
                 
             }
             .frame(width: 350, height: 150)
     
-            .background(Rectangle().fill(Color.white).shadow(radius: 3))
+            .background(RoundedRectangle(cornerRadius: 100).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
             //.padding()
             
-                TextField("Height in feet", text: $feet)
-            
+          TextField("Height in feet", text: $feet)
+                .background(RoundedRectangle(cornerRadius: 100).fill(Color.white).shadow(color: Color.orange.opacity(0.2), radius: 10,x: 0.0,y: 8))
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding()
-            TextField("Height in inches", text: $inches)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            TextField("Height in inches", text: $inches).background(RoundedRectangle(cornerRadius: 100).fill(Color.white).shadow(color: Color.orange.opacity(0.2), radius: 10, x:0.0,y: 8))
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding()
-                            TextField("Enter your weight", text: $weight)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            TextField("Enter your weight", text: $weight)
+                .background(RoundedRectangle(cornerRadius: 100).fill(Color.white).shadow(color: Color.orange.opacity(0.2), radius: 10, x: 0.0,y:8))
+                //.shadow(color: Color.black.opacity(0.08), radius: 60, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                                 . padding()
             
             //..................
             HStack{
                 Text("Gender")
-                    .foregroundColor(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
+                    //.foregroundColor(Color.gray)
+                    .foregroundColor(Color(red: 192 / 255, green: 192 / 255, blue: 192 / 255))
                     .font(.headline)
                     .bold()
                     .padding(15)
@@ -178,45 +183,38 @@ struct bmi_UI: View {
                 calc()
                 }
         label: {
-                Text("CALCULATE")
+            Text("CALCULATE")
               // .padding(20)
                 .font(.title2).bold()
                .foregroundColor(Color.white)
                    .frame(width: 200, height: 60)
                    .cornerRadius(300)
             
-//                    .foregroundColor(Color.white).cornerRadius(300)
-            
             }
-           // .contentShape(Circle())
-            .background(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255))
+           
+        .background(RoundedRectangle(cornerRadius: 100).fill(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)).shadow(radius: 3))
             .padding(30)
             
             HStack{
                 NavigationLink( destination:diet_plan(),isActive: $showunderweight ,label: {
                 
                 Text("Over weight")
-                    .font(.title)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 60)
-                        .background(Rectangle().fill(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255)).cornerRadius(300))
+                        .background(Rectangle().fill(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)).cornerRadius(300))
                 }
-
-                
            )
-                
                 NavigationLink( destination:under_weight(),isActive: $showdietpage ,label: {
                 
                 Text("Under weight")
-                    .font(.title)
+                    .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 60)
-                        .background(Rectangle().fill(Color(red: 153 / 255, green: 0 / 255, blue: 0 / 255)).cornerRadius(300))
+                        .background(Rectangle().fill(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255)).cornerRadius(300))
                 }
-
-                
            )
             }
         }

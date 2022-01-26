@@ -13,7 +13,8 @@ struct under_weight: View {
             ScrollView(.vertical, showsIndicators: false, content:{
                 VStack{
                         Text("Foods to gain weight")
-                            .font(.largeTitle)
+                        .font(.largeTitle).bold()
+                            .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                             .padding()
                     HStack{
                         Image("rice")
@@ -23,7 +24,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Rice")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("130 calories, 28 g carbohydrates,"
                                         )
@@ -42,7 +44,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                     HStack{
@@ -53,7 +55,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Whole Eggs")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("low calories, no carbohydrates,"
                                         )
@@ -72,7 +75,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                     HStack{
@@ -83,7 +86,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Avocados")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("160 calories, 9 g carbohydrates,"
                                         )
@@ -102,7 +106,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                     HStack{
@@ -113,7 +117,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Cheese")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("402 calories, 1.3 g carbohydrates,"
                                         )
@@ -132,7 +137,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                     HStack{
@@ -143,7 +148,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Bananas")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("89 calories, 23 g carbohydrates,"
                                         )
@@ -162,7 +168,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                     
@@ -174,7 +180,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Chicken")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("165 calories, no carbohydrates,"
                                         )
@@ -193,7 +200,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                     HStack{
@@ -204,7 +211,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Red Meat")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("300 calories, no carbohydrates,"
                                         )
@@ -223,7 +231,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                     HStack{
@@ -234,7 +242,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Dried fruits")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("359 calories, 83 g carbohydrates,"
                                         )
@@ -253,7 +262,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                     HStack{
@@ -264,7 +273,8 @@ struct under_weight: View {
                             //.padding(2)
                         VStack{
                             Text("Pasta")
-                                .font(.largeTitle)
+                                .font(.largeTitle).bold()
+                                    .foregroundColor(Color(red: 223 / 255, green: 93 / 255, blue: 6 / 255))
                                 .padding(1)
                             Text("131 calories, 25 g carbohydrates,"
                                         )
@@ -283,7 +293,7 @@ struct under_weight: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(width: 360, height: 180)
-                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(radius: 10))
+                    .background(RoundedRectangle(cornerRadius: 80).fill(Color.white).shadow(color: Color.orange.opacity(0.5), radius: 10))
                     .padding(5)
                     
                 }
